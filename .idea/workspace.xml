@@ -8,19 +8,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompSciAAP/MannBasic/ReviewPrograms/WordToCharDoWhileLoop/Main.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompSciAAP/MannBasic/ReviewPrograms/WordToCharForLoop/Main.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompSciAAP/MannBasic/ReviewPrograms/WordToCharWhileLoop/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CompSciAAP.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MannBasic/Programs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MannBasic/ReviewPrograms/Distance/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MannBasic/ReviewPrograms/ThreeNumAverage/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MannBasic/ReviewPrograms/WordToCharDoWhileLoop/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MannBasic/ReviewPrograms/WordToCharForLoop/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MannBasic/ReviewPrograms/WordToCharWhileLoop/Main.java" />
     </list>
     <ignored path="CompSciAAP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -901,12 +890,20 @@
       <option name="presentableId" value="Default" />
       <updated>1472568034435</updated>
       <workItem from="1472568037829" duration="3240000" />
-      <workItem from="1472573386528" duration="47000" />
+      <workItem from="1472573386528" duration="97000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1472573449908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1472573449908</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3287000" />
+    <option name="totallyTimeSpent" value="3337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="736" extended-state="6" />
@@ -950,6 +947,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
