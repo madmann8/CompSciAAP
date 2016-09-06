@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("data.dat"));
         DataSet data= new DataSet(scanner);
+        data.run();
 
     }
 }

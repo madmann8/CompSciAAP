@@ -33,10 +33,10 @@ public class DataSet {
                 "Print      D %n" +
                 "Exit       E %n%n");
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Enter Option:");
+        System.out.printf("Enter Option: ");
         String letter = scanner.next().trim().toLowerCase();
         while (letter != "a" && letter != "c" && letter != "d" && letter != "p" && letter != "x") {
-            System.out.printf("%n%nEnter A,D,P,X");
+            System.out.printf("%n%nEnter A,D,P,X: ");
             letter = scanner.next();
         }
         return letter;
