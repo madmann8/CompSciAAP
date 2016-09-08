@@ -25,18 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Programs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MannBasic/Programs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#1970#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MannBasic/ReviewPrograms/WordToCharWhileLoop/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,8 +90,8 @@
       <file leaf-file-name="DataSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NameandAge/DataSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+            <state relative-caret-position="120">
+              <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
               <folding>
                 <element signature="docComment;class#DataSet#0" expanded="false" />
                 <element signature="class#commandChoices#0;class#DataSet#0" expanded="false" />
@@ -111,14 +99,23 @@
                 <element signature="method#printCommands#0;class#DataSet#0" expanded="false" />
                 <element signature="method#findCommandChoices#0;class#DataSet#0" expanded="false" />
                 <element signature="method#add#0;class#DataSet#0" expanded="false" />
+                <element signature="method#change#0;class#DataSet#0" expanded="false" />
                 <element signature="method#print#0;class#DataSet#0" expanded="false" />
+                <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
                 <element signature="method#printAgeOrder#0;class#DataSet#0" expanded="false" />
                 <element signature="method#printNameOrder#0;class#DataSet#0" expanded="false" />
                 <element signature="method#printList#0;class#DataSet#0" expanded="false" />
-                <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
-                <element signature="method#run#0;class#DataSet#0" expanded="false" />
-                <element signature="method#delete#0;class#DataSet#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NumberFormatException.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,9 +192,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="773" />
+    <option name="x" value="642" />
+    <option name="width" value="638" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -226,56 +223,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NameandAge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CompSciAAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
@@ -285,6 +233,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mastermind" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -894,7 +843,7 @@
       <workItem from="1473171291161" duration="4441000" />
       <workItem from="1473194865333" duration="2254000" />
       <workItem from="1473208732246" duration="22000" />
-      <workItem from="1473345169683" duration="814000" />
+      <workItem from="1473345169683" duration="4088000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1472573449908</created>
@@ -924,15 +873,22 @@
       <option name="project" value="LOCAL" />
       <updated>1473178569163</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final- No Errors">
+      <created>1473346001924</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1473346001924</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17653000" />
+    <option name="totallyTimeSpent" value="20927000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="false" />
+    <frame x="642" y="0" width="638" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -941,12 +897,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40675476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36301368" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.319063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.319063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -976,18 +932,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final" />
+    <MESSAGE value="Final- No Errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final- No Errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/NameandAge/DataSet.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
@@ -997,14 +946,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MannBasic/ReviewPrograms/Distance/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MannBasic/ReviewPrograms/MultiplicationTable/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1042,13 +983,12 @@
             <element signature="method#printCommands#0;class#DataSet#0" expanded="false" />
             <element signature="method#findCommandChoices#0;class#DataSet#0" expanded="false" />
             <element signature="method#add#0;class#DataSet#0" expanded="false" />
+            <element signature="method#change#0;class#DataSet#0" expanded="false" />
             <element signature="method#print#0;class#DataSet#0" expanded="false" />
+            <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
             <element signature="method#printAgeOrder#0;class#DataSet#0" expanded="false" />
             <element signature="method#printNameOrder#0;class#DataSet#0" expanded="false" />
             <element signature="method#printList#0;class#DataSet#0" expanded="false" />
-            <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
-            <element signature="method#run#0;class#DataSet#0" expanded="false" />
-            <element signature="method#delete#0;class#DataSet#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,13 +1080,12 @@
             <element signature="method#printCommands#0;class#DataSet#0" expanded="false" />
             <element signature="method#findCommandChoices#0;class#DataSet#0" expanded="false" />
             <element signature="method#add#0;class#DataSet#0" expanded="false" />
+            <element signature="method#change#0;class#DataSet#0" expanded="false" />
             <element signature="method#print#0;class#DataSet#0" expanded="false" />
+            <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
             <element signature="method#printAgeOrder#0;class#DataSet#0" expanded="false" />
             <element signature="method#printNameOrder#0;class#DataSet#0" expanded="false" />
             <element signature="method#printList#0;class#DataSet#0" expanded="false" />
-            <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
-            <element signature="method#run#0;class#DataSet#0" expanded="false" />
-            <element signature="method#delete#0;class#DataSet#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1422,10 +1361,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NameandAge/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+        <state relative-caret-position="120">
+          <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
           <folding>
             <element signature="docComment;class#DataSet#0" expanded="false" />
             <element signature="class#commandChoices#0;class#DataSet#0" expanded="false" />
@@ -1433,13 +1380,12 @@
             <element signature="method#printCommands#0;class#DataSet#0" expanded="false" />
             <element signature="method#findCommandChoices#0;class#DataSet#0" expanded="false" />
             <element signature="method#add#0;class#DataSet#0" expanded="false" />
+            <element signature="method#change#0;class#DataSet#0" expanded="false" />
             <element signature="method#print#0;class#DataSet#0" expanded="false" />
+            <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
             <element signature="method#printAgeOrder#0;class#DataSet#0" expanded="false" />
             <element signature="method#printNameOrder#0;class#DataSet#0" expanded="false" />
             <element signature="method#printList#0;class#DataSet#0" expanded="false" />
-            <element signature="method#printPrintOptions#0;class#DataSet#0" expanded="false" />
-            <element signature="method#run#0;class#DataSet#0" expanded="false" />
-            <element signature="method#delete#0;class#DataSet#0" expanded="false" />
           </folding>
         </state>
       </provider>

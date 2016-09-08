@@ -1,8 +1,8 @@
 package NameandAge;
 
-import com.sun.tools.javah.Util;
 
 import java.util.*;
+import java.lang.Integer;
 
 /**
  * Created by madmann on 9/1/16.
@@ -24,10 +24,11 @@ public class DataSet {
             Integer age = readFile.nextInt();
             mDataMap.put(name.trim(), age);
         }
+        readFile.close();
     }
 
     private String printCommands() {
-        System.out.printf("Add        A %n" +
+        System.out.printf("%nAdd        A %n" +
                 "Change     C %n" +
                 "Delete     D %n" +
                 "Print      P %n" +
@@ -36,7 +37,8 @@ public class DataSet {
         System.out.printf("Enter Option: ");
         String letter = scanner.next().trim().toLowerCase();
         while (!(letter.equals("a") || letter.equals("c") || letter.equals("d") || letter.equals("p") || letter.equals("x"))) {
-            System.out.printf("%n%nEnter A,D,P,X: ");
+            System.out.printf("Invaid Option. %n");
+            System.out.printf("Enter A,D,P,X: ");
             letter = scanner.next().toLowerCase().trim();
         }
         return letter;
@@ -69,7 +71,7 @@ public class DataSet {
         int age = scanner.nextInt();
         mDataMap.put(name, age);
     }
-
+//TODO: Fix duplicate names
     private void change() {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter Name: ");
@@ -77,13 +79,17 @@ public class DataSet {
         if (mDataMap.containsKey(oldName)) {
             System.out.printf("%s- Enter Change:", oldName);
             String newName = scanner.next();
-            System.out.printf("%d- Enter Change:", mDataMap.get(oldName));
+            System.out.printf("%d- Enter Change:%n", mDataMap.get(oldName));
             int newAge = scanner.nextInt();
-            if (oldName != null) {
+            if (newName.trim()=="") {
+                scanner.close();
+            }
+            else {
                 mDataMap.remove(oldName);
                 mDataMap.put(newName, newAge);
             }
-            System.out.printf("%s %d %n", newAge, newAge);
+
+            System.out.printf("%s %d %n", newName, newAge);
             System.out.printf("Changes Complete %n");
         } else System.out.printf("Invalid name. Try again.");
     }
@@ -96,9 +102,23 @@ public class DataSet {
         if (letter.equals("n")) {
             printNameOrder();
         }
-        if (letter.equals( "a")) {
+        if (letter.equals("a")) {
             printAgeOrder();
         }
+    }
+
+    private String printPrintOptions() {
+        System.out.printf("Print List           L%n" +
+                "Print Name Order     N%n" +
+                "Print Age Order      A%n" +
+                "Back to Main Menu    M%n");
+        System.out.printf("Enter Option:    ");
+        Scanner scanner = new Scanner(System.in);
+        String letter = scanner.next().trim().toLowerCase();
+        if (!(letter.equals("l") || letter.equals("n") || letter.equals("a") || letter.equals("m"))) {
+            return printPrintOptions();
+        }
+        return letter;
     }
 
     private void printAgeOrder() {
@@ -130,27 +150,20 @@ public class DataSet {
     }
 
     private void printList() {
-        Iterator it = mDataMap.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            System.out.printf("%10s %d %n", pair.getKey(), pair.getValue());
-            it.remove();
+        String[] names = new String[mDataMap.size()];
+        int i = 0;
+        for (String name : mDataMap.keySet()) {
+            names[i] = name;
+            i++;
         }
-    }
+        Arrays.sort(names);
+        int e;
+        System.out.printf("   Name    Age %n");
+        for (e = 0; e < names.length; e++) {
+            System.out.printf("%10s %d %n", names[e], mDataMap.get(names[e]));
+        }
 
 
-    private String printPrintOptions() {
-        System.out.printf("Print List           L%n" +
-                "Print Name Order     N%n" +
-                "Print Age Order      A%n" +
-                "Back to Main Menu    M%n");
-        System.out.printf("Enter Option:    ");
-        Scanner scanner = new Scanner(System.in);
-        String letter = scanner.next().trim().toLowerCase();
-        if (!(letter.equals("l") || letter.equals("n") || letter.equals("a") || letter.equals("m"))) {
-            return printPrintOptions();
-        }
-        return letter;
     }
 
     public void run() {
@@ -171,6 +184,7 @@ public class DataSet {
             }
             command = findCommandChoices();
         }
+        System.out.printf("%nProgram Done");
     }
 
     private void delete() {
