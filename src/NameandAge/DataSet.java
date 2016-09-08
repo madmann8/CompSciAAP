@@ -30,14 +30,14 @@ public class DataSet {
         System.out.printf("Add        A %n" +
                 "Change     C %n" +
                 "Delete     D %n" +
-                "Print      D %n" +
+                "Print      P %n" +
                 "Exit       E %n%n");
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter Option: ");
         String letter = scanner.next().trim().toLowerCase();
-        while (letter != "a" && letter != "c" && letter != "d" && letter != "p" && letter != "x") {
+        while (!(letter.equals("a") || letter.equals("c") || letter.equals("d") || letter.equals("p") || letter.equals("x"))) {
             System.out.printf("%n%nEnter A,D,P,X: ");
-            letter = scanner.next();
+            letter = scanner.next().toLowerCase().trim();
         }
         return letter;
     }
@@ -77,7 +77,7 @@ public class DataSet {
         if (mDataMap.containsKey(oldName)) {
             System.out.printf("%s- Enter Change:", oldName);
             String newName = scanner.next();
-            System.out.printf("%d- Enter Change:");
+            System.out.printf("%d- Enter Change:", mDataMap.get(oldName));
             int newAge = scanner.nextInt();
             if (oldName != null) {
                 mDataMap.remove(oldName);
@@ -90,15 +90,14 @@ public class DataSet {
 
     private void print() {
         String letter = printPrintOptions();
-        switch (letter) {
-            case "l":
-                printList();
-            case "n":
-                printNameOrder();
-            case "a":
-                printAgeOrder();
-            case "m":
-            default:
+        if (letter.equals("l")) {
+            printList();
+        }
+        if (letter.equals("n")) {
+            printNameOrder();
+        }
+        if (letter.equals( "a")) {
+            printAgeOrder();
         }
     }
 
@@ -134,7 +133,7 @@ public class DataSet {
         Iterator it = mDataMap.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            System.out.printf("%15s %d %n", pair.getKey(), pair.getValue());
+            System.out.printf("%10s %d %n", pair.getKey(), pair.getValue());
             it.remove();
         }
     }
@@ -148,7 +147,7 @@ public class DataSet {
         System.out.printf("Enter Option:    ");
         Scanner scanner = new Scanner(System.in);
         String letter = scanner.next().trim().toLowerCase();
-        if (letter != "l" && letter != "n" && letter != "a" && letter != "m") {
+        if (!(letter.equals("l") || letter.equals("n") || letter.equals("a") || letter.equals("m"))) {
             return printPrintOptions();
         }
         return letter;
@@ -170,7 +169,7 @@ public class DataSet {
                 print();
 
             }
-           command=findCommandChoices();
+            command = findCommandChoices();
         }
     }
 
@@ -181,8 +180,7 @@ public class DataSet {
         if (mDataMap.containsKey(oldName)) {
             mDataMap.remove(oldName);
             System.out.printf("Changes Complete %n");
-        }
-         else System.out.printf("Invalid name. Try again.");
+        } else System.out.printf("Invalid name. Try again.");
     }
 }
 
