@@ -1,6 +1,8 @@
 package NameandAge;
 
 
+import com.sun.tools.javac.util.ArrayUtils;
+
 import java.util.*;
 import java.lang.Integer;
 
@@ -12,19 +14,25 @@ public class DataSet {
         Add, Delete, Change, Print, Exit;
     }
 
-    HashMap<String, Integer> mDataMap = new HashMap<>();
+    int mArrayLength;
+
+    Integer[] mAges = new Integer[100];
+    String[] mNames = new String[100];
 
     public DataSet(Scanner readFile) {
         readFile(readFile);
     }
 
     private void readFile(Scanner readFile) {
+        int i = 0;
         while (readFile.hasNext()) {
             String name = readFile.next();
             Integer age = readFile.nextInt();
-            mDataMap.put(name.trim(), age);
+            mNames[i] = name;
+            mAges[i] = age;
+            i++;
         }
-        readFile.close();
+        mArrayLength = i;
     }
 
     private String printCommands() {
@@ -67,31 +75,55 @@ public class DataSet {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter Name: ");
         String name = scanner.next();
+        while (Arrays.asList(mNames).contains(name)) {
+            System.out.printf("%nName already accounted for, try again:");
+            name = scanner.next();
+        }
         System.out.printf("Enter Age: ");
         int age = scanner.nextInt();
-        mDataMap.put(name, age);
+        mNames[mArrayLength + 1] = name;
+        mAges[mArrayLength + 1] = age;
     }
-//TODO: Fix duplicate names
+
+    //TODO: Make sure name not found appears multiple times
     private void change() {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter Name: ");
         String oldName = scanner.next();
-        if (mDataMap.containsKey(oldName)) {
+        if (Arrays.asList(mNames).contains(oldName)) {
             System.out.printf("%s- Enter Change:", oldName);
             String newName = scanner.next();
-            System.out.printf("%d- Enter Change:%n", mDataMap.get(oldName));
-            int newAge = scanner.nextInt();
-            if (newName.trim()=="") {
-                scanner.close();
-            }
-            else {
-                mDataMap.remove(oldName);
-                mDataMap.put(newName, newAge);
-            }
+            while (!(Arrays.asList(mNames).contains(newName))) {
+                System.out.printf("%d- Enter Change:%n", ageFromName(oldName));
+                scanner.nextLine();
+                String newAgeString = scanner.nextLine();
+                if (!(Arrays.asList(mNames).contains(newName))) {
+                    mNames[arrayLocation(oldName)] = newName;
+                    mAges[arrayLocation(ageFromName(oldName))] = Integer.parseInt(newAgeString);
+                    int newAge = Integer.parseInt(newAgeString);
+                    mAges[mArrayLength + 1] = newAge;
+                    mNames[mArrayLength + 1] = newName;
+                    mArrayLength++;
+                    System.out.printf("%s %d %n", newName, newAge);
+                    System.out.printf("Changes Complete %n");
 
-            System.out.printf("%s %d %n", newName, newAge);
-            System.out.printf("Changes Complete %n");
-        } else System.out.printf("Invalid name. Try again.");
+                } else {
+                    mAges[mArrayLength + 1] = ageFromName(oldName);
+                    mNames[mArrayLength + 1] = newName;
+                    mArrayLength++;
+                    System.out.printf("%s %d %n", mAges[arrayLocation(ageFromName(oldName))], mNames[arrayLocation(newName)]);
+                    System.out.printf("Changes Complete %n");
+                    System.out.printf("%nNo age Entered.Exiting.%n");
+                }
+            }
+        } else {
+            System.out.printf("Invalid name. Would you like to try again");
+            String choice = scanner.next().trim().toLowerCase();
+            if (choice == "y") {
+                change();
+            }
+        }
+
     }
 
     private void print() {
@@ -122,48 +154,36 @@ public class DataSet {
     }
 
     private void printAgeOrder() {
-        int[] ages = new int[mDataMap.size()];
-        int i = 0;
-        for (int age : mDataMap.values()) {
-            ages[i] = age;
-            i++;
-        }
-        Arrays.sort(ages);
-        int e;
-        for (e = 0; e < ages.length; e++) {
-            System.out.printf("%s %n", ages[e]);
+        sortAge(mNames, mAges);
+        int i;
+        for (i = 0; i < mAges.length; i++) {
+            int age = mAges[i];
+            String name = mNames[i];
+            System.out.printf("%d %10s %n", age, name);
         }
     }
 
     private void printNameOrder() {
-        String[] names = new String[mDataMap.size()];
-        int i = 0;
-        for (String name : mDataMap.keySet()) {
-            names[i] = name;
-            i++;
-        }
-        Arrays.sort(names);
-        int e;
-        for (e = 0; e < names.length; e++) {
-            System.out.printf("%s %n", names[e]);
+        String[] tempArray = new String[mNames.length];
+        tempArray = mNames;
+        int i;
+        Arrays.sort(tempArray);
+        for (i = 0; i < tempArray.length; i++) {
+            String age = tempArray[i];
+            int name = ageFromName(age);
+            System.out.printf("%d %10s %n", name, age);
         }
     }
 
     private void printList() {
-        String[] names = new String[mDataMap.size()];
-        int i = 0;
-        for (String name : mDataMap.keySet()) {
-            names[i] = name;
-            i++;
+        int i;
+        for (i = 0; i < mNames.length; i++) {
+            int age = mAges[i];
+            String name = nameFromAge(age);
+            if (name != null) {
+                System.out.printf("%10s %d %n", name, age);
+            }
         }
-        Arrays.sort(names);
-        int e;
-        System.out.printf("   Name    Age %n");
-        for (e = 0; e < names.length; e++) {
-            System.out.printf("%10s %d %n", names[e], mDataMap.get(names[e]));
-        }
-
-
     }
 
     public void run() {
@@ -191,10 +211,48 @@ public class DataSet {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter Name: ");
         String oldName = scanner.next();
-        if (mDataMap.containsKey(oldName)) {
-            mDataMap.remove(oldName);
-            System.out.printf("Changes Complete %n");
+        if (Arrays.asList(mNames).contains(oldName)) {
+            int i;
+            for (i = 0; i < mNames.length - 1; i++) {
+                mNames[i] = mNames[i + 1];
+                mAges[i] = mAges[i + 1];
+            }
         } else System.out.printf("Invalid name. Try again.");
+        mArrayLength++;
+    }
+
+    private String nameFromAge(Integer age) {
+        int location = Arrays.asList(mAges).indexOf(age);
+        return mNames[location];
+
+    }
+
+    private Integer ageFromName(String name) {
+        int location = Arrays.asList(mNames).indexOf(name);
+        return mAges[location];
+    }
+
+    private int arrayLocation(String name) {
+        return Arrays.asList(mNames).indexOf(name);
+    }
+
+    private int arrayLocation(Integer age) {
+        return Arrays.asList(mAges).indexOf(age);
+    }
+
+    private void sortAge(String[] name, Integer[] age) {
+        for (int i = 0; i < age.length - 1; i++) {
+            for (int e = 0; e < age.length - 1 - i; e++) {
+                if (age[e] > age[e + 1]) {
+                    int tempArray = age[e];
+                    age[e] = age[e + 1];
+                    age[e + 1] = tempArray;
+                    String tempArray2 = name[e];
+                    name[e] = name[e + 1];
+                    name[e + 1] = tempArray2;
+                }
+            }
+        }
     }
 }
 
