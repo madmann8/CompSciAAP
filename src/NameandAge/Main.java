@@ -9,9 +9,12 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, InterruptedException {
+        //Enter path for data here:
         Scanner scanner = new Scanner(new File("data.dat"));
         DataSet data= new DataSet(scanner);
+        //Use data.run() to execute program
         data.run();
 
     }
+
 }

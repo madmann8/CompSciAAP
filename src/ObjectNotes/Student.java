@@ -19,4 +19,24 @@ public class Student {
     public int getId() {
         return id;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static void add(int x, int y) {
+        int answer;
+        answer = x + y;
+        System.out.println(answer);
+    }
+
+    public static void add(Double x, Double y) {
+        Double answer;
+        answer = x + y;
+        System.out.println(answer);
+    }
 }
