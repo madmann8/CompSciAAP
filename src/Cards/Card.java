@@ -17,7 +17,8 @@ public class Card {
     private void genCard(){
         Random random=new Random();
         mSuit=suits[random.nextInt(suits.length)];
-        mValue=values[random.nextInt(values.length)];
+        mValue=values[random.nextInt(values
+                .length)];
     }
 
     @Override
