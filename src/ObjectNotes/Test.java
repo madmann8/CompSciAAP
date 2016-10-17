@@ -1,19 +1,30 @@
 package ObjectNotes;
 
-/**
- * Created by madmann on 9/23/16.
- */
+
 public class Test {
-    public static void main(String[] args){
-        Student student1= new Student("Luke", 1237213);
-        Student student2= new Student("Mann", 1232213);
-        student1.setId(1231);
-        student2.setId(123431);
-        student2.setName("Foo");
-        student1.setName("Bar");
-        System.out.println(student1.getName());
-        System.out.println(student1.getId());
-        System.out.println(student2.getName());
-        System.out.println(student2.getId());
+    public static void main(String[] args) {
+        Student stud1= new Student("Ben",10);
+        Student stud2 = new Student ("Will",10);
+        Student stud3 = new Student ("Shelby");
+        System.out.println(stud1);
+        Student stud4 = stud3;
+        if (stud1.equals (stud2))
+            System.out.println ("Students stud1 and stud2 are equal");
+        else
+            System.out.println ("Students stud1 and stud2 are NOT equal");
+        if (stud1.equals (stud3))
+            System.out.println ("Students stud1 and stud3 are equal");
+        else
+            System.out.println ("Students stud1 and stud3 are NOT equal");
+        if (stud1 == stud2)
+            System.out.println ("Students stud1 and stud2 are ==");
+        else
+            System.out.println ("Students stud1 and stud2 are NOT ==");
+        if (stud3 == stud4)
+            System.out.println ("Students stud3 and stud4 are ==");
+        else
+            System.out.println ("Students stud3 and stud4 are NOT ==");
+
+
     }
 }

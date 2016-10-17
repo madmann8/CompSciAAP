@@ -12,6 +12,16 @@ public class Student {
         this.id = id;
     }
 
+    public Student(String name) {
+        this.name = name;
+        id=0;
+    }
+
+    public Student() {
+        name="";
+        id=0;
+    }
+
     public String getName() {
         return name;
     }
@@ -38,5 +48,15 @@ public class Student {
         Double answer;
         answer = x + y;
         System.out.println(answer);
+    }
+
+    public boolean equals(Student obj) {
+        int checkId= obj.getId();
+        if (checkId==id) return true;
+        else return false;
+    }
+
+    public String toString() {
+        return name + "\n" +id;
     }
 }
