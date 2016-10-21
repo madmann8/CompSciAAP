@@ -14,6 +14,28 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
+    //Constructor that takes a numerator and denominator and makes then the the numerator and denominator of the Fraction class.
+    public Fraction(int numerator, int denominator) {
+        this.numerator = numerator;
+        if (denominator==0) {
+            this.denominator=1;
+        }
+        else{
+            this.denominator = denominator;
+        }
+    }
+
+    //Constructor that takes a Fraction as the sole parameter and makes the Fraction equivalent to the inputted Fraction.
+    public Fraction(Fraction in) {
+        this.numerator = in.getNumerator();
+        if (in.getDenominator()==0){
+            this.denominator=1;
+        }
+        else {
+            this.denominator = in.getDenominator();
+        }
+    }
+
 //    Accessor method for numerator
     public int getNumerator() {
         return numerator;
@@ -30,28 +52,6 @@ public class Fraction {
 //Accessor method for denominator
     public void setDenominator(int denominator) {
         this.denominator = denominator;
-    }
-
-//Constructor that takes a numerator and denominator and makes then the the numerator and denominator of the Fraction class.
-    public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        if (denominator==0) {
-            this.denominator=1;
-        }
-        else{
-            this.denominator = denominator;
-        }
-        }
-
-//Constructor that takes a Fraction as the sole parameter and makes the Fraction equivalent to the inputted Fraction.
-    public Fraction(Fraction in) {
-        this.numerator = in.getNumerator();
-        if (in.getDenominator()==0){
-            this.denominator=1;
-        }
-       else {
-           this.denominator = in.getDenominator();
-        }
     }
 
 //    Public override method that returns the numerator and denominator as a String

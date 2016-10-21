@@ -1,0 +1,12 @@
+Number One: 5/4
+Number Two: 1/4
+Number Three: 3/8
+Number Four: 3/2
+Number Five: 31/48
+Number Six: -1/48
+Number Seven: 5/48
+Number Eight: 15/16
+Number Nine: 3/4
+Number Ten: 1/4
+Number Eleven: 1/8
+Number Twelve: 2/1
