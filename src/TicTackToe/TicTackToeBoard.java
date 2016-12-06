@@ -88,6 +88,7 @@ reset();
                 Xturn = false;
                 if (isDone()) {
                     System.out.println("X wins!");
+                    reset();
                 }
             }
                 if (!Xturn) {
