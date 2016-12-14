@@ -97,7 +97,6 @@ public class Dealer {
 
     private boolean isPrefered(Suits faceUpSuit, Values faceUpValue, Suits suit1, Values value1, Suits suit2, Values value2) {
         if (suit1.equals(faceUpSuit) && suit2.equals(faceUpSuit)) {
-//            PROBLEM: THE HIGHEST CARD IZ BEIGN PLAYED NOT LOWEST THAT IS HIGHER THEN THE OPONENT
             if(!(value1.rank<=faceUpValue.rank&&value2.rank<=faceUpValue.rank)){
                 if (value1.rank>faceUpValue.rank && (!(value2.rank>faceUpValue.rank))){
                     return true;
