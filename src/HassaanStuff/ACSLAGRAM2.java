@@ -96,31 +96,31 @@ public class ACSLAGRAM2 {
 
     }
 
-    private static boolean isPrefered(String faceUpSuit, int faceUpValue, String suit1, int value1, String suit2, int value2) {
-        if (suit1.equals(faceUpSuit) && suit2.equals(faceUpSuit)) {
-            if (!(value1 <= faceUpValue && value2 <= faceUpValue)) {
-                if (value1 > faceUpValue && (!(value2 > faceUpValue))) {
+    private static boolean findBetterCard(String leadCardSuit, int leadCardValue, String inputCardSuit1, int inputCardValue1, String inputCardSuit2, int inputCardValue2) {
+        if (inputCardSuit1.equals(leadCardSuit) && inputCardSuit2.equals(leadCardSuit)) {
+            if (!(inputCardValue1 <= leadCardValue && inputCardValue2 <= leadCardValue)) {
+                if (inputCardValue1 > leadCardValue && (!(inputCardValue2 > leadCardValue))) {
                     return true;
                 } else {
                     return false;
                 }
             } else {
-                if (value1 < value2) {
+                if (inputCardValue1 < inputCardValue2) {
                     return true;
                 } else {
                     return false;
                 }
             }
         }
-        if (suit1.equals(faceUpSuit)) {
+        if (inputCardSuit1.equals(leadCardSuit)) {
             return true;
         }
-        if (suit2.equals(faceUpSuit)) {
+        if (inputCardSuit2.equals(leadCardSuit)) {
             return false;
         }
-        if (value1 < value2) {
+        if (inputCardValue1 < inputCardValue2) {
             return true;
-        } else if (value1> value2) {
+        } else if (inputCardValue1> inputCardValue2) {
             return false;
         } else {
             System.out.println(":(");
@@ -153,36 +153,36 @@ public class ACSLAGRAM2 {
         input.close();
 
         String opponentCardSuit = leadCard.substring(1);
-        String suit1 = leadCard.substring(1);
-        String suit2 = leadCard.substring(1);
-        String suit3 = leadCard.substring(1);
-        String suit4 = leadCard.substring(1);
-        String suit5 = leadCard.substring(1);
+        String s1 = card1.substring(1);
+        String s2 = card2.substring(1);
+        String s3 = card3.substring(1);
+        String s4 = card4.substring(1);
+        String s5 = card5.substring(1);
         int opponentCardValue = getIntRepresenationofValue(leadCard);
-        int value1 = getIntRepresenationofValue(card1);
-        int value2 = getIntRepresenationofValue(card2);
-        int value3 = getIntRepresenationofValue(card3);
-        int value4 = getIntRepresenationofValue(card4);
-        int value5 = getIntRepresenationofValue(card5);
+        int v1 = getIntRepresenationofValue(card1);
+        int v2 = getIntRepresenationofValue(card2);
+        int v3 = getIntRepresenationofValue(card3);
+        int v4 = getIntRepresenationofValue(card4);
+        int v5 = getIntRepresenationofValue(card5);
 
-        String bestSuit = suit1;
-        int bestValue = value1;
+        String bestSuit = s1;
+        int bestValue = v1;
 
-        if (isPrefered(opponentCardSuit, opponentCardValue, suit2, value2, bestSuit, bestValue)) {
-            bestSuit = suit2;
-            bestValue = value2;
+        if (findBetterCard(opponentCardSuit, opponentCardValue, s2, v2, bestSuit, bestValue)) {
+            bestSuit = s2;
+            bestValue = v2;
         }
-        if (isPrefered(opponentCardSuit, opponentCardValue, suit3, value3, bestSuit, bestValue)) {
-            bestSuit = suit3;
-            bestValue = value3;
+        if (findBetterCard(opponentCardSuit, opponentCardValue, s3, v3, bestSuit, bestValue)) {
+            bestSuit = s3;
+            bestValue = v3;
         }
-        if (isPrefered(opponentCardSuit, opponentCardValue, suit4, value4, bestSuit, bestValue)) {
-            bestSuit = suit4;
-            bestValue = value4;
+        if (findBetterCard(opponentCardSuit, opponentCardValue, s4, v4, bestSuit, bestValue)) {
+            bestSuit = s4;
+            bestValue = v4;
         }
-        if (isPrefered(opponentCardSuit, opponentCardValue, suit5, value5, bestSuit, bestValue)) {
-            bestSuit = suit5;
-            bestValue = value5;
+        if (findBetterCard(opponentCardSuit, opponentCardValue, s5, v5, bestSuit, bestValue)) {
+            bestSuit = s5;
+            bestValue = v5;
         }
         System.out.println("Your cards are " + leadCard + ", " + card1 + ", " + card2 + ", " + card3 + ", " + card4 + ", " + card5);
 
