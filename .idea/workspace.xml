@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3413e979-de79-4e16-9ba0-9e6040cc4e05" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ACSLProgramIntermediate/Dealer.java" afterPath="$PROJECT_DIR$/src/ACSLProgramIntermediate/Dealer.java" />
     </list>
     <ignored path="CompSciAAP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1300,7 +1299,7 @@
       <workItem from="1481584772076" duration="217000" />
       <workItem from="1481664974588" duration="2415000" />
       <workItem from="1481729112613" duration="5186000" />
-      <workItem from="1481747511799" duration="2193000" />
+      <workItem from="1481747511799" duration="2256000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1472573449908</created>
@@ -1428,11 +1427,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481749699357</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Final">
+      <created>1481749983579</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1481749983579</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193320000" />
+    <option name="totallyTimeSpent" value="193383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
