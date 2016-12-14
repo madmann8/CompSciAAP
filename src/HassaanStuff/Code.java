@@ -53,6 +53,8 @@ public class ACSLAGRAM2 {
         card5 = input.nextLine();
         input.close();
 
+
+
         System.out.println("Your cards are " +leadCard +", " +card1 +", " +card2 +", " +card3 +", " +card4 +", " +card5);
 
         if (leadCard.substring(1)==card1.substring(1) || leadCard.substring(1)==card2.substring(1) || leadCard.substring(1)==card3.substring(1) || leadCard.substring(1)==card4.substring(1) || leadCard.substring(1)==card5.substring(1)){
@@ -65,6 +67,12 @@ public class ACSLAGRAM2 {
                             }
 
             }
+        }
+
+    }
+    int getSuit(String input){
+        if (input.substring(1).equals("C")){
+            return 0;
         }
     }
 }
