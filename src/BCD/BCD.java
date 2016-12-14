@@ -60,7 +60,7 @@ public class BCD {
 
     //    Adds a digit to left most number in BCD (ex. is BCD is 123, addADigit(1) is 1123)
     public void addADigit(Integer newDigit) {
-//        Shifts all numbers over by one
+    //        Shifts all numbers over by one
         digit = increaseSize(digit);
         digit[digit.length - 1] = newDigit;
     }

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-//A class that represnts a ticktac toe board with two publi functions, run and reset
 /**
- * Created by madmann on 12/2/16.
+ *A class that represnts a ticktac toe board with two public functions, run and reset
+ * Created by Luke Mann on 12/2/16.
  */
 public class TicTackToeBoard {
     String[][] board = {{"A", "B", "C"}, {"D", "E", "F"}, {"G", "H", "I"}};
@@ -84,11 +84,15 @@ reset();
                         board[2][2] = "X";
                     default:
                 }
-                turnCounter++;
                 Xturn = false;
+                turnCounter++;
                 if (isDone()) {
                     System.out.println("X wins!");
-                    reset();
+                    return;
+                }
+                if (turnCounter==9){
+                    System.out.println("It's A Tie!");
+                    return;
                 }
             }
                 if (!Xturn) {
@@ -140,15 +144,16 @@ reset();
                     }
                     Xturn = true;
                     turnCounter++;
+
                     if (isDone()){
                         System.out.println("O Wins!");
-                        reset();
+                        return;
+                    }
+                    if (turnCounter==9){
+                        System.out.println("It's A Tie!");
+                        return;
                     }
                 }
-            }
-        if (turnCounter>=9){
-            System.out.println("It's A Tie!");
-            reset();
         }
     }
 
@@ -172,7 +177,7 @@ reset();
         return false;
     }
 
-    public static boolean isThree(String string, String string2, String string3) {
+    private  boolean isThree(String string, String string2, String string3) {
         if (string.equals(string2) && string3.equals(string2)) {
             return true;
         }
