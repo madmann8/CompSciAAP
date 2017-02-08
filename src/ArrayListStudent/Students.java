@@ -146,7 +146,7 @@ private ArrayList<Student> students=new ArrayList<>();
         String name = scanner.nextLine();
         System.out.printf("Enter New ID: ");
         Integer ID=scanner.nextInt();
-        while (ContainsID(ID)) {
+        while (ContainsID(ID) && !(ID.equals(student.getID()))) {
             System.out.println("ID already accounted for, try again");
             ID = scanner.nextInt();
         }
@@ -190,3 +190,5 @@ private ArrayList<Student> students=new ArrayList<>();
 
 
 }
+
+
