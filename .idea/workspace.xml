@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3413e979-de79-4e16-9ba0-9e6040cc4e05" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ACSLIntermidatePt2/Intermediate.java" afterPath="$PROJECT_DIR$/src/ACSLIntermidatePt2/Intermediate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ACSLSeniorPt2/Senior.java" afterPath="$PROJECT_DIR$/src/ACSLSeniorPt2/Senior.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SortingAlgorithms/sortTemp.java" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/sortTemp.java" />
     </list>
     <ignored path="CompSciAAP.iws" />
@@ -146,8 +144,8 @@
       <file leaf-file-name="Intermediate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ACSLIntermidatePt2/Intermediate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1301,7 +1299,7 @@
       <workItem from="1486562435368" duration="4822000" />
       <workItem from="1486574605759" duration="285000" />
       <workItem from="1486588101654" duration="4123000" />
-      <workItem from="1486740021319" duration="8636000" />
+      <workItem from="1486740021319" duration="8712000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1472573449908</created>
@@ -1506,11 +1504,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486769788295</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Final">
+      <created>1486769965827</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1486769965827</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237846000" />
+    <option name="totallyTimeSpent" value="237922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2067,8 +2072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ACSLIntermidatePt2/Intermediate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
