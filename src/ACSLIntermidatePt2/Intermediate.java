@@ -3,9 +3,6 @@ package ACSLIntermidatePt2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by madmann on 2/8/17.
- */
 public class Intermediate {
     public static void main(String[] args) {
         for (int f = 0; f < 100; f++) {
