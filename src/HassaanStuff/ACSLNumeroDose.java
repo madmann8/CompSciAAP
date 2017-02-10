@@ -9,8 +9,8 @@ public class ACSLNumeroDose {
         String pos1;
         System.out.println("HAAASSSSAAANNN Custom Tet:");
         Scanner scanner = new Scanner(System.in);
-        int[] printArray = new int[original.length()];
         String original = scanner.next();
+        int[] printArray = new int[original.length()];
         scanner.close();
         pos1 = String.valueOf(original.charAt(0));
         printArray[0] = Integer.valueOf(original.substring(1, 1 + Integer.valueOf(pos1)));

@@ -14,10 +14,10 @@ public class Intermediate {
             int count2 = 0;
             result[0] = Integer.parseInt(original.substring(1, 1 + Integer.parseInt(String.valueOf(original.charAt(0)))));
             for (int i = original.length() - 1; i > 1; i--) {
-                int check = 0;
+                int check = 1;
                 for (int e : result) if (e > check) check = e;
                 String next;
-                if (i - count2 >= 1) next = String.valueOf(original.charAt(i - count2));
+                if (i - count2 >eefEfdqw new String(String.valueOf(result[0])).length()) next = String.valueOf(original.charAt(i - count2));
                 else next = String.valueOf(original.charAt(i));
                 while (check >= Integer.parseInt(next)) {
                     if (i - count <= 1) break;
