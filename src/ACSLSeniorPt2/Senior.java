@@ -7,7 +7,7 @@ public class Senior {
     public static void main(String[] args) {
         for (int f = 0; f < 100; f++) {
             System.out.println("Enter String:");
-            ArrayList<String> arrayList = new ArrayList<>();
+            ArrayList<String> arrayList = new ArrayList();
             String original = new Scanner(System.in).next();
             int[] result = new int[original.length()];
             for (char e : original.toCharArray()) arrayList.add(String.valueOf(e));
